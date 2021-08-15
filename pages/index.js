@@ -1,9 +1,47 @@
 import Head from "next/head";
-import Image from "next/image";
+import { useState, useEffect, Fragment } from "react";
 import UploadIcon from "../components/icons/upload";
 import styles from "../styles/Home.module.css";
-
+import axios from "axios";
+import CircularProgress from "@material-ui/core/CircularProgress";
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+  const [predict, setPredict] = useState(null);
+  const [img, setImg] = useState(null);
+  useEffect(() => {
+    prediction();
+  }, [img]);
+  const prediction = async () => {
+    if (img) {
+      console.log(img);
+      setLoading(true);
+      await axios
+        .post("https://lab.ggolfz.codes/papaya-api/predict", { data: img })
+        .then((res) => {
+          if (res.data.success) {
+            setPredict({
+              class: res.data.class,
+              confident: res.data.confident,
+            });
+            setLoading(false);
+          }
+        });
+    }
+  };
+  const handleClickUpload = () => {
+    document.getElementById("fileUpload").click();
+  };
+  const handleFileUpload = (e) => {
+    if (e.target.files[0]) {
+      var reader = new FileReader();
+      reader.onloadend = function () {
+        if (reader.result) {
+          setImg(reader.result);
+        }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -13,21 +51,31 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="#">Papaya Pog Pog!</a>
-        </h1>
+        <Fragment>
+          <h1 className={styles.title}>
+            Welcome to <a href="#">Papaya Pog Pog!</a>
+          </h1>
 
-        <p className={styles.description}>Get started by upload your image</p>
-
-        <div className={styles.grid}>
-          <div className={styles.card}>
-          <UploadIcon />
-            <h2>
-              Upload Papaya Image{" "} 
-            </h2>
-            
+          <p className={styles.description}>Get started by upload your image</p>
+          <input
+            type="file"
+            style={{ display: "none" }}
+            id="fileUpload"
+            onChange={handleFileUpload}
+          />
+          <div className={styles.grid} onClick={handleClickUpload}>
+            <div className={styles.card}>
+              {loading ? (
+                <CircularProgress size={60} />
+              ) : (
+                <Fragment>
+                  <UploadIcon />
+                  <h2>Upload Papaya Image </h2>
+                </Fragment>
+              )}
+            </div>
           </div>
-        </div>
+        </Fragment>
       </main>
 
       <footer className={styles.footer}>

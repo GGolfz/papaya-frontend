@@ -84,6 +84,9 @@
   cursor: pointer;
   text-align: center;
 }
+.card div {
+  color: #0070f3;
+}
 
 .card:hover,
 .card:focus,
