@@ -75,6 +75,24 @@ export default function Home() {
               )}
             </div>
           </div>
+          {!loading ? (
+            <Fragment>
+              {img ? (
+                <img
+                  src={img}
+                  alt="Papaya Image"
+                  width="224px"
+                  height="224px"
+                />
+              ) : null}
+              {predict ? (
+                <span>
+                  I am {Math.round(predict.confident * 10000) / 100}% confident
+                  that your papaya are {predict.class} papaya.
+                </span>
+              ) : null}
+            </Fragment>
+          ) : null}
         </Fragment>
       </main>
 
