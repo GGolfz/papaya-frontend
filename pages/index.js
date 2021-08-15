@@ -63,18 +63,6 @@ export default function Home() {
             id="fileUpload"
             onChange={handleFileUpload}
           />
-          <div className={styles.grid} onClick={handleClickUpload}>
-            <div className={styles.card}>
-              {loading ? (
-                <CircularProgress size={60} />
-              ) : (
-                <Fragment>
-                  <UploadIcon />
-                  <h2>Upload Papaya Image </h2>
-                </Fragment>
-              )}
-            </div>
-          </div>
           {!loading ? (
             <Fragment>
               {img ? (
@@ -93,6 +81,18 @@ export default function Home() {
               ) : null}
             </Fragment>
           ) : null}
+          <div className={styles.grid} onClick={handleClickUpload}>
+            <div className={styles.card}>
+              {loading ? (
+                <CircularProgress size={60} />
+              ) : (
+                <Fragment>
+                  <UploadIcon />
+                  <h2>Upload Papaya Image </h2>
+                </Fragment>
+              )}
+            </div>
+          </div>
         </Fragment>
       </main>
 
