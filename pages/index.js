@@ -86,10 +86,10 @@ export default function Home() {
                 />
               ) : null}
               {predict ? (
-                <span>
+                <h3>
                   I am {Math.round(predict.confident * 10000) / 100}% confident
                   that your papaya are {predict.class} papaya.
-                </span>
+                </h3>
               ) : null}
             </Fragment>
           ) : null}
