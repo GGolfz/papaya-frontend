@@ -3,11 +3,13 @@ import { useState, useEffect, Fragment } from "react";
 import UploadIcon from "../components/icons/upload";
 import styles from "../styles/Home.module.css";
 import axios from "axios";
+import Dialog from "@material-ui/core/Dialog";
 import CircularProgress from "@material-ui/core/CircularProgress";
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [predict, setPredict] = useState(null);
   const [img, setImg] = useState(null);
+  const [dialog, setDialog] = useState(false);
   useEffect(() => {
     prediction();
   }, [img]);
@@ -24,6 +26,7 @@ export default function Home() {
               confident: res.data.confident,
             });
             setLoading(false);
+            setDialog(true);
           }
         });
     }
@@ -63,23 +66,14 @@ export default function Home() {
             id="fileUpload"
             onChange={handleFileUpload}
           />
-          {!loading ? (
-            <Fragment>
-              {img ? (
-                <img
-                  src={img}
-                  alt="Papaya Image"
-                  width="224px"
-                  height="224px"
-                />
-              ) : null}
-              {predict ? (
-                <h3>
-                  I am {Math.round(predict.confident * 10000) / 100}% confident
-                  that your papaya are {predict.class} papaya.
-                </h3>
-              ) : null}
-            </Fragment>
+          {!loading && img && predict ? (
+            <Dialog open={dialog} onBackdropClick={() => setDialog(false)}>
+              <img src={img} alt="Papaya Image" width="224px" height="224px" />
+              <h3>
+                I am {Math.round(predict.confident * 10000) / 100}% confident
+                that your papaya are {predict.class} papaya.
+              </h3>
+            </Dialog>
           ) : null}
           <div className={styles.grid} onClick={handleClickUpload}>
             <div className={styles.card}>
