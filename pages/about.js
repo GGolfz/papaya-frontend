@@ -2,7 +2,7 @@ import Nav from '../components/nav';
 
 const About =()=>{
     return(
-        <div><Nav></Nav></div>
+        <Fragment><Nav /></Fragment>
         
     )
 }
