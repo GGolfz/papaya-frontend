@@ -52,7 +52,7 @@ const Demo = () => {
         <main className={styles.main}>
           <Fragment>
             <h1 className={styles.title}>
-              Welcome to <a href="#">Papaya Pog Pog!</a>
+            Payaya Ripeness  <a href="#">Classifier</a>
             </h1>
 
             <p className={styles.description}>

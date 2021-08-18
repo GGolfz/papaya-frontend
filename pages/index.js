@@ -4,6 +4,7 @@ const Home = () => {
   return (
     <Fragment>
       <Nav />
+      <h1>Home Page</h1>
     </Fragment>
   );
 };

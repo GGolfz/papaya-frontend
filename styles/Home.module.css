@@ -34,7 +34,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #F95511;
   text-decoration: none;
 }
 
@@ -85,20 +85,20 @@
   text-align: center;
 }
 .card div {
-  color: #0070f3;
+  color: #45B97F;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #45B97F;
+  border-color: #45B97F;
 }
 
 .card:hover path,
 .card:focus path,
 .card:active path {
-  fill: #0070f3;
+  fill: #45B97F;
 }
 
 .card h2 {
