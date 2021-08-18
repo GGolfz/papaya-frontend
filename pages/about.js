@@ -1,11 +1,12 @@
 import Nav from "../components/nav";
 import { Fragment } from "react";
-const Home = () => {
+
+const About = () => {
   return (
     <Fragment>
       <Nav />
-      <h1>Home Page</h1>
+      <h1>About Page</h1>
     </Fragment>
   );
 };
-export default Home;
+export default About;

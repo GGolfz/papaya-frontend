@@ -1,0 +1,38 @@
+.nav_container{
+    height: 90px;
+    width: 100vw;
+    padding: 0 2rem;
+    background-color: transparent;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.name_div > span{
+    color:#1C213B;
+    font-size: 2rem;
+    font-weight: 500;
+}
+span.special {
+    color: #F95511; 
+    margin-left: 1rem;
+}
+.action_div {
+    display: flex;
+}
+.menu_txt{
+    color:#1C213B;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.demo_btn{
+    background-color: #45B97F;
+    border-radius: 18px;
+    padding: .6rem 1.5rem;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
