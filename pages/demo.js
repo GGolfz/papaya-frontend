@@ -1,6 +1,6 @@
 import { useState, useEffect, Fragment } from "react";
 import UploadIcon from "../components/icons/upload";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Demo.module.css";
 import axios from "axios";
 import Dialog from "@material-ui/core/Dialog";
 import CircularProgress from "@material-ui/core/CircularProgress";
