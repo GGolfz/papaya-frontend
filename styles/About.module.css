@@ -40,3 +40,19 @@ span.special {
     font-size: 1.5rem;
     font-weight: 500;
 }
+.system_container{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.system_name{
+    color: #F95511; 
+    font-size: 2rem;
+    font-weight: 500;
+}
+.img_div{
+    padding-top:5vh;
+}
