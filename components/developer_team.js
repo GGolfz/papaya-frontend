@@ -12,7 +12,7 @@ const DevTeam = () => {
                     <div>
                         <Image  src={opal} width={170} height={170}></Image>
                     </div> 
-                    <div className={styles.team_name}>Kaewket <br></br>Saelee </div>
+                    <div className={styles.team_name}>Kaewket Saelee </div>
                     <div className={styles.team_id}>62130500206 </div>
                 </div>
                 <div className={styles.team_card}>
