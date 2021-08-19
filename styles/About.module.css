@@ -54,5 +54,57 @@ span.special {
     font-weight: 500;
 }
 .img_div{
-    padding-top:5vh;
+   padding: 5vh 20vw;
+
+}
+.dev_bg{
+    padding-top: 20vh;
+    position: absolute;
+    background: url("../components/images/bg_about.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height: 100vh;
+}
+.dev_name{
+    
+    color: #1C213B; 
+    font-size: 2rem;
+    font-weight: 500;
+}
+.team_box{
+    background: white;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1), 3px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 60vw;
+    height: 40vh;
+    margin-top:5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.team_card{
+    width: 17vw;
+    height: 28vh;
+    margin: 5vh 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team_name{
+    padding-top: 2vh;
+    color: #1C213B; 
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+}
+.team_id{
+    padding-top: 1vh;
+    color: #1C213B; 
+    font-size: 1.25rem;
+    font-weight: 400;
 }
