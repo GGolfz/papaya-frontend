@@ -3,15 +3,18 @@
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
 }
 .container {
   display: flex;
-  /* flex-direction: column;   */
   justify-content: center;
   align-items: center;
 }
 .container_classify {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .name {
   font-size: 3rem;

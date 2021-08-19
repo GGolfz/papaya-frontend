@@ -12,15 +12,17 @@ const Home = () => {
         <Nav />
         <div className={styles.container}>
           <div className={styles.container_classify}>
-            <span className={styles.name}>Classify Your</span>
-            <span className={styles.name_special}> Papaya</span>
+            <div>
+              <span className={styles.name}>Classify Your</span>
+              <span className={styles.name_special}> Papaya</span>
+            </div>
 
             <div className={styles.detail}>
-              <p>
+              <div>
                 Lorem ipsum dolor sit amet,
                 <br />
                 consectetur adipiscing elit,
-              </p>
+              </div>
             </div>
             <div className={styles.btn_box}>
               <div className={styles.btn_getStarted}>
