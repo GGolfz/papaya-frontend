@@ -22,9 +22,13 @@ const Home = () => {
                 consectetur adipiscing elit,
               </p>
             </div>
-            <Link href="/demo">
-              <a className={styles.btn_getStarted}>Get Started</a>
-            </Link>
+            <div className={styles.btn_box}>
+              <div className={styles.btn_getStarted}>
+                <Link href="/demo">
+                  <a>Get Started</a>
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className={styles.photo_saly}>
