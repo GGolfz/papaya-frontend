@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
         <title>Papaya PogPog</title>
         <meta name="description" content="Papaya PogPog" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+        </Head>
       <Component {...pageProps} />
     </Fragment>
   );

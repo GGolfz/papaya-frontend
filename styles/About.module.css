@@ -7,6 +7,7 @@
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
+
 }
 .name_div > span{
     color:#1C213B;
@@ -19,6 +20,9 @@ span.special {
 }
 .action_div {
     display: flex;
+}
+.action_div a{
+    margin: 0rem 2rem;
 }
 .menu_txt{
     color:#1C213B;
@@ -35,4 +39,63 @@ span.special {
     color:white;
     font-size: 1.5rem;
     font-weight: 500;
+}
+.system_container{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.system_name{
+    color: #F95511; 
+    font-size: 2rem;
+    font-weight: 500;
+}
+.img_div{
+    padding: 5rem 10rem;
+}
+.dev_bg{
+    background: url("../components/images/bg_about.png") center bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dev_name{
+    
+    color: #1C213B; 
+    font-size: 2rem;
+    font-weight: 500;
+}
+.team_box{
+    background: white;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1), 3px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 80%;
+    height: 40%;
+    margin-top:5%;
+    margin-bottom: 5%;
+    display: flex;
+}
+.team_card{
+    width: 33%;
+    height: 50%;
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team_name{
+    padding-top: 1rem;
+    color: #1C213B; 
+    font-size: 1.25rem;
+    text-align: center;
+}
+.team_id{
+    padding-top: 0.5rem;
+    color: #1C213B; 
+    font-size: 1.25rem;
 }
