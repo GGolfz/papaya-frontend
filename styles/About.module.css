@@ -40,8 +40,7 @@ span.special {
   font-weight: 500;
 }
 .system_container {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin: 1.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,7 +102,6 @@ span.special {
   width: 250px;
 }
 .flexTech {
-  margin: 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -113,10 +111,15 @@ span.special {
   font-size: 2rem;
   font-weight: 500;
 }
-.tech_stacks{
+.tech_stacks {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
- 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .flexTech {
+    margin: 0 5rem;
+  }
+}
