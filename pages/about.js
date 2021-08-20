@@ -24,6 +24,7 @@ const About = () => {
         <div className={styles.flexTech}>{renderTech()}</div>
       </div>
       <DevTeam />
+      </div>
     </Fragment>
   );
 };
