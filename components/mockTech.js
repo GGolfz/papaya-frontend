@@ -1,0 +1,51 @@
+exports.mockTech = [
+  {
+    id: 1,
+    name: "Python3",
+    img: "/images/technology/python.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 2,
+    name: "Numpy Library",
+    img: "/images/technology/numpy.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 3,
+    name: "Pandas Library",
+    img: "/images/technology/pandas.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 4,
+    name: "Tensorflow",
+    img: "/images/technology/tensorflow.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 5,
+    name: "Python Notebook Platform",
+    img: "/images/technology/python_note.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 6,
+    name: "Matplotlib Library",
+    img: "/images/technology/matplotlib.png",
+    width: 120,
+    height: 80,
+  },
+  {
+    id: 7,
+    name: "ScikitLearn Library",
+    img: "/images/technology/scikitlearn.png",
+    width: 80,
+    height: 80,
+  },
+];
