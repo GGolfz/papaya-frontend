@@ -8,7 +8,7 @@ const TechStack = (props) => {
         <div className={styles.container_tech}>
             <Card>
                 <CardContent>
-                    <Image src={props.img} width={80} height={80}></Image>
+                    <Image src={props.img} width={props.width} height={props.height}></Image>
                     <div>
                     {props.name}
                     </div>
