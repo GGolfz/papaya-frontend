@@ -17,6 +17,7 @@ const About = () => {
   return (
     <Fragment>
       <Nav />
+      <div className={styles.about_bg}>
       <SystemArch />
       <div className={styles.tech_stacks}>
         <div className={styles.tech_name}>Technology Stacks</div>
