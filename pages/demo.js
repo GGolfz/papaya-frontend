@@ -5,6 +5,7 @@ import axios from "axios";
 import Dialog from "@material-ui/core/Dialog";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Nav from "../components/nav";
+
 const Demo = () => {
   const [loading, setLoading] = useState(false);
   const [predict, setPredict] = useState(null);
@@ -47,12 +48,12 @@ const Demo = () => {
   };
   return (
     <Fragment>
-    <div className={styles.container}>
-      <Nav />
+      <div className={styles.container}>
+        <Nav />
         <main className={styles.main}>
           <Fragment>
             <h1 className={styles.title}>
-            Payaya Ripeness  <a href="#">Classifier</a>
+              Payaya Ripeness <a href="#">Classifier</a>
             </h1>
 
             <p className={styles.description}>
@@ -66,6 +67,7 @@ const Demo = () => {
             />
             {!loading && img && predict ? (
               <Dialog open={dialog} onBackdropClick={() => setDialog(false)}>
+                <div className={styles.container_dialog}>
                 <img
                   src={img}
                   alt="Papaya Image"
@@ -76,6 +78,13 @@ const Demo = () => {
                   I am {Math.round(predict.confident * 10000) / 100}% confident
                   that your papaya are {predict.class} papaya.
                 </h3>
+                <div
+                  onClick={() => setDialog(false)}
+                  className={styles.btn_getIt}
+                >
+                  <a>Got it!!!</a>
+                </div>
+                </div>
               </Dialog>
             ) : null}
             <div className={styles.grid} onClick={handleClickUpload}>
