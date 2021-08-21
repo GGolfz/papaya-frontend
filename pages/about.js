@@ -40,6 +40,24 @@ const About = () => {
         </div>
         <DevTeam />
       </div>
+      <footer className={styles.footer}>
+       <span className={styles.powered_by}>Powered by</span>
+          <a
+            href="https://www.chingly.codes/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className={styles.logo}>chingly</span>
+          </a>
+          <span className={styles.and}>{" & "}</span>
+          <a
+            href="https://kaewket.codes/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className={styles.logo}>coolkidneversleep</span>
+          </a>
+        </footer>
     </Fragment>
   );
 };
