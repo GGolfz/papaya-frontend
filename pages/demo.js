@@ -10,6 +10,7 @@ const Demo = () => {
   const [loading, setLoading] = useState(false);
   const [predict, setPredict] = useState(null);
   const [img, setImg] = useState(null);
+  const [croppedImg, setCroppedImg] = useState([]);
   const [dialog, setDialog] = useState(false);
   useEffect(() => {
     prediction();
@@ -20,13 +21,22 @@ const Demo = () => {
       await axios
         .post("https://lab.ggolfz.codes/papaya-api/predict", { data: img })
         .then((res) => {
-          if (res.data.success) {
-            setPredict({
-              class: res.data.class,
-              confident: res.data.confident,
-            });
+          if(res.data.error) {
+            setLoading(false);
+            alert("Sorry");
+          }
+          if (res.data.length > 0) {
+            let cropped = []
+            for(let i of res.data) {
+              if(i.type == 'original') {
+                setPredict({confident: i.confident, class: i.class});
+              } else if(i.type == 'cropped') {
+                cropped.push({confident: i.confident, class: i.class,img:i.img})
+              }
+            }
             setLoading(false);
             setDialog(true);
+            setCroppedImg(cropped);
           }
         });
     }
@@ -67,16 +77,23 @@ const Demo = () => {
             {!loading && img && predict ? (
               <Dialog open={dialog} onClose={() => setDialog(false)}>
                 <div className={styles.container_dialog}>
+                  <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
                   <img
                     src={img}
                     alt="Papaya Image"
-                    width="224px"
                     height="224px"
                   />
                   <h3>
                     I am {Math.round(predict.confident * 10000) / 100}%
                     confident that your papaya are {predict.class} papaya.
                   </h3>
+                  </div>
+                  <div style={{display:'flex',flexWrap:'wrap'}}>
+                    {croppedImg.map((e,index) => (<div style={{margin:'0 2rem',display:'flex',flexDirection:'column',alignItems:'center'}} key={index}>
+                      <img height="150px" src={e.img} />
+                      <h4>{e.class} ({Math.round(e.confident * 10000) / 100}%)</h4>
+                    </div>))}
+                  </div>
                   <button
                     onClick={() => setDialog(false)}
                     className={styles.btn_getIt}
