@@ -16,7 +16,6 @@ const Demo = () => {
   }, [img]);
   const prediction = async () => {
     if (img) {
-      console.log(img);
       setLoading(true);
       await axios
         .post("https://lab.ggolfz.codes/papaya-api/predict", { data: img })
@@ -66,24 +65,24 @@ const Demo = () => {
               onChange={handleFileUpload}
             />
             {!loading && img && predict ? (
-              <Dialog open={dialog} onBackdropClick={() => setDialog(false)}>
+              <Dialog open={dialog} onClose={() => setDialog(false)}>
                 <div className={styles.container_dialog}>
-                <img
-                  src={img}
-                  alt="Papaya Image"
-                  width="224px"
-                  height="224px"
-                />
-                <h3>
-                  I am {Math.round(predict.confident * 10000) / 100}% confident
-                  that your papaya are {predict.class} papaya.
-                </h3>
-                <div
-                  onClick={() => setDialog(false)}
-                  className={styles.btn_getIt}
-                >
-                  <a>Got it!!!</a>
-                </div>
+                  <img
+                    src={img}
+                    alt="Papaya Image"
+                    width="224px"
+                    height="224px"
+                  />
+                  <h3>
+                    I am {Math.round(predict.confident * 10000) / 100}%
+                    confident that your papaya are {predict.class} papaya.
+                  </h3>
+                  <button
+                    onClick={() => setDialog(false)}
+                    className={styles.btn_getIt}
+                  >
+                    Got it!!!
+                  </button>
                 </div>
               </Dialog>
             ) : null}
@@ -101,16 +100,6 @@ const Demo = () => {
             </div>
           </Fragment>
         </main>
-
-        <footer className={styles.footer}>
-          <a
-            href="https://ggolfz.codes"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by <span className={styles.logo}>GGolfz</span>
-          </a>
-        </footer>
       </div>
     </Fragment>
   );
