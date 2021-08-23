@@ -19,9 +19,9 @@ const Home = () => {
 
             <div className={styles.detail}>
               <div>
-                Lorem ipsum dolor sit amet,
+                AI for classification the papaya 
                 <br />
-                consectetur adipiscing elit,
+                by the ripeness of papaya.
               </div>
             </div>
             <div className={styles.btn_box}>
