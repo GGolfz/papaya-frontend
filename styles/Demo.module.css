@@ -129,7 +129,7 @@
 }
 .container_dialog{
   width: 600px;
-  height: 450px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
