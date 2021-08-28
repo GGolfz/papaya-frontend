@@ -1,4 +1,4 @@
-exports.mockTech = [
+exports.technology = [
   {
     id: 1,
     name: "Python3",
