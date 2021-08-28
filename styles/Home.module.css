@@ -40,3 +40,12 @@
   padding: 1rem 2.5rem;
   background-color: #45b97f;
 }
+
+@media screen and (max-width: 959px) {
+  .photo_saly {
+    display: none;
+  }
+  .container {
+    margin-top: 1.5rem;
+  }
+}

@@ -1,4 +1,4 @@
-exports.mockTech = [
+exports.technology = [
   {
     id: 1,
     name: "Python3",
@@ -8,14 +8,14 @@ exports.mockTech = [
   },
   {
     id: 2,
-    name: "Numpy Library",
+    name: "Numpy",
     img: "/images/technology/numpy.png",
     width: 80,
     height: 80,
   },
   {
     id: 3,
-    name: "Pandas Library",
+    name: "Pandas",
     img: "/images/technology/pandas.png",
     width: 80,
     height: 80,
@@ -29,22 +29,43 @@ exports.mockTech = [
   },
   {
     id: 5,
-    name: "Python Notebook Platform",
+    name: "Google Colab",
     img: "/images/technology/python_note.png",
     width: 80,
     height: 80,
   },
   {
     id: 6,
-    name: "Matplotlib Library",
+    name: "Matplotlib",
     img: "/images/technology/matplotlib.png",
     width: 120,
     height: 80,
   },
   {
     id: 7,
-    name: "ScikitLearn Library",
+    name: "ScikitLearn",
     img: "/images/technology/scikitlearn.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 8,
+    name: "Darknet",
+    img: "/images/technology/darknet.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 9,
+    name: "Yolo v4",
+    img: "/images/technology/yolov4.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    id: 10,
+    name: "OpenCV",
+    img: "/images/technology/opencv.png",
     width: 80,
     height: 80,
   },
