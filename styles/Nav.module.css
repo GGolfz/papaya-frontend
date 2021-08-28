@@ -8,10 +8,11 @@
   align-items: center;
   justify-content: space-between;
 }
-.name_div > span {
+.name_div {
   color: #1c213b;
   font-size: 2rem;
   font-weight: 500;
+  z-index: 20;
 }
 span.special {
   color: #f95511;
@@ -50,6 +51,7 @@ span.special {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    z-index: 20;
   }
   .hamburger > span {
     width: 24px;
@@ -73,7 +75,7 @@ span.special {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 72px;
+    padding-top: 72px;
     align-items: center;
     background: #fffcfc;
     z-index: -1;
