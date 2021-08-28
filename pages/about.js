@@ -11,19 +11,17 @@ const About = () => {
     for (let i = 0; i < Math.ceil(mockTech.length / 4); i++) {
       tech.push(
         <Fragment key={i}>
-          <div className={styles.flexTech}>
-            {mockTech.slice(4 * i, 4 * (i + 1)).map((item) => {
-              return (
-                <TechStack
-                  key={item.id}
-                  name={item.name}
-                  img={item.img}
-                  width={item.width}
-                  height={item.height}
-                ></TechStack>
-              );
-            })}
-          </div>
+          {mockTech.slice(4 * i, 4 * (i + 1)).map((item) => {
+            return (
+              <TechStack
+                key={item.id}
+                name={item.name}
+                img={item.img}
+                width={item.width}
+                height={item.height}
+              ></TechStack>
+            );
+          })}
         </Fragment>
       );
     }
@@ -36,7 +34,7 @@ const About = () => {
         <SystemArch />
         <div className={styles.tech_stacks}>
           <h1 className={styles.tech_name}>Technology Stacks</h1>
-          {renderTech()}
+          <div className={styles.flexTech}>{renderTech()}</div>
         </div>
         <DevTeam />
       </div>
