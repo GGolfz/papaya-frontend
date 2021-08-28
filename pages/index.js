@@ -19,7 +19,7 @@ const Home = () => {
 
             <div className={styles.detail}>
               <div>
-                AI for classification the papaya 
+                AI for classification the papaya
                 <br />
                 by the ripeness of papaya.
               </div>
@@ -34,7 +34,7 @@ const Home = () => {
           </div>
 
           <div className={styles.photo_saly}>
-            <Image src={saly} width={800} height={695}></Image>
+            <Image src={saly} width={600} height={520}></Image>
           </div>
         </div>
       </div>
