@@ -2,13 +2,11 @@ import Nav from "../components/nav";
 import { Fragment } from "react";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import Image from "next/image";
-import saly from "../components/images/saly.png";
 
 const Home = () => {
   return (
     <Fragment>
-      <div className={styles.bg_home}>
+      <div className={styles.home}>
         <Nav />
         <div className={styles.container}>
           <div className={styles.container_classify}>
@@ -16,7 +14,6 @@ const Home = () => {
               <span className={styles.name}>Classify Your</span>
               <span className={styles.name_special}> Papaya</span>
             </div>
-
             <div className={styles.detail}>
               <div>
                 AI for classification the papaya
@@ -32,11 +29,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div className={styles.photo_saly}>
-            <Image src={saly} width={600} height={520}></Image>
-          </div>
         </div>
+        <div className={styles.bg_home}></div>
       </div>
     </Fragment>
   );
