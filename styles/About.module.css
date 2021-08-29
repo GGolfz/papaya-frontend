@@ -121,4 +121,11 @@
   .img_div {
     padding: 1rem;
   }
+  .team_box {
+    flex-direction: column;
+  }
+  .team_card {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
 }
