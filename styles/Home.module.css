@@ -1,15 +1,33 @@
-.bg_home {
-  background-image: url("../components/images/bg_home.png");
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
+.home {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.bg_home {
+  background: radial-gradient(
+    104.86% 82.71% at bottom,
+    rgba(249, 85, 17, 0.7) 33.65%,
+    rgba(255, 0, 0, 0.7) 44.58%,
+    rgba(255, 97, 0, 0.7) 100%
+  );
+  filter: blur(600px);
+  transform: rotate(-37.36deg);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: -1;
 }
 .container {
   display: flex;
-  justify-content: center;
+  padding-left: 10rem;
   align-items: center;
+  background: url("../components/images/saly.png");
+  background-size: cover;
+  background-position: right top;
+  height: calc(100vh - 90px);
 }
 .container_classify {
   text-align: center;
@@ -40,12 +58,11 @@
   padding: 1rem 2.5rem;
   background-color: #45b97f;
 }
-
-@media screen and (max-width: 959px) {
-  .photo_saly {
-    display: none;
-  }
+@media screen and (max-width: 1200px) {
   .container {
+    background: none;
+    justify-content: center;
+    padding: 0;
     margin-top: 1.5rem;
   }
 }
