@@ -126,6 +126,7 @@
   text-align: center;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 .container_dialog {
   width: 100%;
