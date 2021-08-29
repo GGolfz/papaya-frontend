@@ -13,7 +13,6 @@ class MyDocument extends Document {
           <title>Papaya PogPog</title>
           <meta name="description" content="Papaya PogPog" />
           <meta name="keywords" content="Papaya, PogPog" />
-          <meta
           <link rel="icon" href="/favicon.png" />
         </Head>
         <body>
