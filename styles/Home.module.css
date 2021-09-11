@@ -7,29 +7,11 @@
 .bg_home {
   background: radial-gradient(
     104.86% 82.71% at bottom,
-    rgba(249, 85, 17, 0.7) 33.65%,
-    rgba(255, 0, 0, 0.7) 44.58%,
-    rgba(255, 97, 0, 0.7) 100%
+    rgba(249, 85, 17, 0.5) 33.65%,
+    rgba(255, 0, 0, 0.5) 44.58%,
+    rgba(255, 97, 0, 0.5) 100%
   );
-  background: -webkit-radial-gradient(
-    104.86% 82.71% at bottom,
-    rgba(249, 85, 17, 0.7) 33.65%,
-    rgba(255, 0, 0, 0.7) 44.58%,
-    rgba(255, 97, 0, 0.7) 100%
-  );
-  background: -o-radial-gradient(
-    104.86% 82.71% at bottom,
-    rgba(249, 85, 17, 0.7) 33.65%,
-    rgba(255, 0, 0, 0.7) 44.58%,
-    rgba(255, 97, 0, 0.7) 100%
-  );
-  background: -moz-radial-gradient(
-    104.86% 82.71% at bottom,
-    rgba(249, 85, 17, 0.7) 33.65%,
-    rgba(255, 0, 0, 0.7) 44.58%,
-    rgba(255, 97, 0, 0.7) 100%
-  );
-  filter: blur(600px);
+  filter: blur(120px);
   transform: rotate(-37.36deg);
   width: 100vw;
   height: 100vh;
