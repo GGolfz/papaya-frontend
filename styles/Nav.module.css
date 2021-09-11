@@ -30,6 +30,9 @@ span.special {
 .action_div a:hover {
   color: #45b97f;
 }
+.action_div a:hover:nth-last-child(1) {
+  color: white;
+}
 .menu_txt {
   color: #1c213b;
   font-size: 1.5rem;
