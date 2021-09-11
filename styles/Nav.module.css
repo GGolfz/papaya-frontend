@@ -55,6 +55,7 @@ span.special {
     justify-content: space-around;
     align-items: center;
     z-index: 20;
+    cursor: pointer;
   }
   .hamburger > span {
     width: 24px;
