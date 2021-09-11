@@ -19,13 +19,13 @@ const Nav = () => {
       </div>
       <div className={`${styles.action_div} ${open ? styles.open : ""}`}>
         <Link href="/">
-          <a className={styles.menu_txt}>Home</a>
+          <a className={styles.menu_txt} onClick={()=>setOpen(false)}>Home</a>
         </Link>
         <Link href="/about">
-          <a className={styles.menu_txt}>About</a>
+          <a className={styles.menu_txt} onClick={()=>setOpen(false)}>About</a>
         </Link>
         <Link href="/demo">
-          <a className={styles.demo_btn}> Demo</a>
+          <a className={styles.demo_btn} onClick={()=>setOpen(false)}> Demo</a>
         </Link>
       </div>
     </div>
