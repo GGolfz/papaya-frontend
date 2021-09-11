@@ -10,7 +10,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Papaya PogPog</title>
           <meta name="description" content="Papaya PogPog" />
           <meta name="keywords" content="Papaya, PogPog" />
           <link rel="icon" href="/favicon.png" />
