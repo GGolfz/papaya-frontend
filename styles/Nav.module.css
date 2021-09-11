@@ -27,6 +27,9 @@ span.special {
 .action_div a {
   margin: 0rem 2rem;
 }
+.action_div a:hover {
+  color: #45b97f;
+}
 .menu_txt {
   color: #1c213b;
   font-size: 1.5rem;
@@ -93,7 +96,7 @@ span.special {
   }
   .action_div > a {
     padding: 1rem 0;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     width: 120px;
     display: flex;
     justify-content: center;
