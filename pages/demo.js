@@ -19,7 +19,7 @@ const Demo = () => {
     if (img) {
       setLoading(true);
       await axios
-        .post("https://lab.ggolfz.codes/papaya-api/predict", { data: img })
+        .post("https://lab.ggolfz.me/papaya-api/predict", { data: img })
         .then((res) => {
           if (res.data.error) {
             setLoading(false);
